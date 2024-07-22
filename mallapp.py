@@ -33,3 +33,7 @@ scrum_master_task = Task(
     agent=ScrumMaster,
     output_file="scrum_master_output.md",
 )
+crew = Crew(agents=[ScrumMaster], tasks=[scrum_master_task], verbose=2)
+result = crew.kickoff()
+print(result)
+
